@@ -14,3 +14,23 @@ Here're some of the project's best features:
 *   Just type in the robot's name and it will automatically filter the robots
 ![robosearch](https://github.com/Peterloveprogramming/RoboFriends/assets/131538732/725a2887-69c2-49f3-b980-9d6d0df382e4)
 
+
+  <h2>🍰 Contribution Guidelines:</h2>
+
+To fix a bug or enhance an existing module follow these steps: 
+
+*   Fork the repo
+*   Create a new branch (git checkout -b improve-feature)
+*   Make the appropriate changes in the files
+*   Add changes to reflect the changes made
+*   Commit your changes (git commit -m 'Improve feature')
+*   Push to the branch (git push origin improve-feature)
+*   Create a Pull Request
+  
+<h2>💻 Built with</h2>
+
+Technologies used in the project:
+
+*   ReactJS
+*   NPM 
+
