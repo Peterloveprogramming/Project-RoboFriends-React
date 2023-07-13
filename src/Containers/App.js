@@ -1,13 +1,13 @@
-import React, {Component} from 'react';
+import React, {useState,useEffect} from 'react';
 import CardList from '../Componenets/CardList';
-import {robots} from '../Componenets/robots';
+import {robotsList} from '../Componenets/robots';
 import SearchBox from '../Componenets/SearchBox'
 import './App.css';
 import Scroll from '../Componenets/Scroll';
 import ErrorBoundry from '../Componenets/ErrorBoundry';
 
-class App extends Component {
-	constructor (){
+function App() {
+/*	constructor (){
 		super()
 		this.state ={
 			robots:[],
@@ -16,22 +16,29 @@ class App extends Component {
 	}
 	componentDidMount(){
 		this.setState({robots:robots})
+	}*/
+
+	const [robots, setRobots] = useState([]);
+	const [searchfield, setSearchfield] = useState('');
+	const onSearchChange = (event) => {
+		setSearchfield(event.target.value)
 	}
 
-	onSearchChange = (event) =>{
-		this.setState({searchfield:event.target.value})
-	}
+ useEffect(() => {
+    setRobots(robotsList)
+   
+  },[]);
 
-	render () {
-		const {robots, searchfield} = this.state
-		const filterRobots = robots.filter(robot=>{
-			return robot.name.toLowerCase().includes(searchfield.toLowerCase())
+console.log(robots,searchfield)
+/*	const {robots, searchfield} = this.state*/
+	const filterRobots = robots.filter(robot=>{
+	return robot.name.toLowerCase().includes(searchfield.toLowerCase())
 		});
 	return (
 		<div className ="tc">
 			<h1 className ="f1">Robofriends</h1>
 
-				<SearchBox searchChange ={this.onSearchChange}/>
+				<SearchBox searchChange ={onSearchChange}/>
 			<Scroll>
 				<ErrorBoundry>
 					<CardList robots = {filterRobots}/>
@@ -39,7 +46,7 @@ class App extends Component {
 			</Scroll>
 		</div>
 		)
-	}
+	
 }
 
 export default App;
