@@ -3,7 +3,7 @@
 
 ![robo](https://github.com/Peterloveprogramming/RoboFriends/assets/131538732/78311dd0-66ee-4046-8206-73dc2eea3439)
 
-<p id="description">Robo Friends in a ReactJS web application which is a Card UI and have different users information in card form and we can search dynamically through those cards by name of user.</p>
+<p id="description">A Card UI built with React.js with hooks, which displays various robot information. The card-based design allows for dynamic searching of robots by their names, enabling users to easily find specific robot details..</p>
 
 <h2>🚀 Demo</h2>
 https://peterloveprogramming.github.io/RoboFriends/
