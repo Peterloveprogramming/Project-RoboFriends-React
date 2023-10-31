@@ -32,5 +32,21 @@ To fix a bug or enhance an existing module follow these steps:
 Technologies used in the project:
 
 *   ReactJS
-*   NPM 
+*   NPM
+
+<h2>🔌 Set up Instructions</h2>
+
+Backend
+*   Clone this repo
+*   Open the back end folder and run command - npm install
+*   In .env file configure the below 3 lines 
+      *   DB_DATABASE= the schema of your mySQL database
+      *   DB_USERNAME= login name
+      *   DB_PASSWORD = login password
+*  Run command - php artisan migrate
+*  Run command - php artisan serve
+      *   This starts the local host to start listening to HTTP requests
+
+
+
 
